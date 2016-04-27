@@ -3,6 +3,7 @@
 const gulp  = require('gulp');
 const uglify = require('gulp-uglify');
 const gutil = require('gulp-util');
+const concat = require('gulp-concat');
 
 gulp.task('default', ['watch'],  function() {
   console.log('inital gulp');
@@ -11,7 +12,8 @@ gulp.task('default', ['watch'],  function() {
 gulp.task('js', function(done){
   return gulp.src('assets/js/**/*')
     .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
+    .pipe(concat('all.min.js'))
+    .pipe(gulp.dest('assets/js'))
     .on('error', gutil.log);
 });
 

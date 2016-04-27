@@ -7,7 +7,7 @@
 
     run.$inject = ['$log'];
     function run($log) {
-      $log.debug('inital project');
+      $log.debug('inital project!!!');
     };
 
 }())

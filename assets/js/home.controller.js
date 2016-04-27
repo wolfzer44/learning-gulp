@@ -9,7 +9,7 @@
 
     function gulpCtrl($scope) {
       var vm = this;
-      vm.text = "Hello World!";
+      vm.text = "Hello World";
     };
 
 }());
